@@ -8,7 +8,7 @@ phases:
       - echo "Setting up Flutter..."
       - apt-get update && apt-get install -y git curl unzip
       - git clone https://github.com/Vibewithak/flutter.git -b stable --depth 1
-      - export PATH="$PATH:/root/flutter/bin"
+      - export PATH="$PATH:E:\flutter-main"
       - flutter config --no-analytics
       - flutter doctor
 
