@@ -1,0 +1,27 @@
+version: 0.2
+
+ 
+
+phases:
+  pre_build:
+    commands:
+      - echo "Setting up Flutter..."
+      - apt-get update && apt-get install -y git curl unzip
+      - git clone https://github.com/Vibewithak/flutter.git -b stable --depth 1
+      - export PATH="$PATH:/root/flutter/bin"
+      - flutter config --no-analytics
+      - flutter doctor
+
+ 
+
+  build:
+    commands:
+      - echo "Building the Flutter project..."
+      - flutter pub get
+      - flutter build apk --release
+
+ 
+
+artifacts:
+  files:
+    - build/app/outputs/flutter-apk/app-release.apk
