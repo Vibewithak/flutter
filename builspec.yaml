@@ -8,7 +8,7 @@ phases:
       - echo "Setting up Flutter..."
       - choco install git
       - git clone https://github.com/Vibewithak/flutter.git -b stable --depth 1
-      - set PATH=%PATH%;C:\path\to\flutter\bin
+      - set PATH=%PATH%;C:\flutter-main
       - flutter config --no-analytics
       - flutter doctor
 
